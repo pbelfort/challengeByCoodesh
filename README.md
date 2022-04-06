@@ -27,4 +27,6 @@ flutter pub get
 Dessa maneira será feito o download das bibliotecas utilizadas, evitando erros de compilação.
 
 3) Após os passos anteriores, basta rodar a aplicação.
+
+
 ![image](https://user-images.githubusercontent.com/42588868/161904002-96738a75-3672-4ca5-98c6-d43025ff7e16.png)
