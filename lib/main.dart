@@ -17,22 +17,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MediaQuery(
-      data: MediaQueryData.fromWindow(WidgetsBinding.instance!.window),
-      child: ScreenUtilInit(
-        designSize: const Size(360, 720),
-        builder: () => GetMaterialApp(
-          debugShowCheckedModeBanner: false,
-          initialRoute: Routes.SPLASH, //Rota inicial
-          initialBinding: SplashBinding(), // dependencias iniciais
-          home: const SplashPage(), // Page inicial
-          theme: appThemeData, //Tema personalizado app
-          defaultTransition:
-              Transition.noTransition, // Transição de telas padrão
-          getPages: AppPages.routes, // Seu array de navegação contendo as rotas
-          locale: const Locale('pt', 'BR'), // Língua padrão
-          // translationsKeys:
-          //     AppTranslation.translations, // Suas chaves contendo as traduções<map>
-        ),
+      data: MediaQueryData.fromWindow(WidgetsBinding.instance.window),
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: Routes.SPLASH, //Rota inicial
+        initialBinding: SplashBinding(), // dependencias iniciais
+        home: const SplashPage(), // Page inicial
+        theme: appThemeData, //Tema personalizado app
+        defaultTransition: Transition.noTransition, // Transição de telas padrão
+        getPages: AppPages.routes, // Seu array de navegação contendo as rotas
+        locale: const Locale('pt', 'BR'), // Língua padrão
+        // translationsKeys:
+        //     AppTranslation.translations, // Suas chaves contendo as traduções<map>
       ),
     );
   }
